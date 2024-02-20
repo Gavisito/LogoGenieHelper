@@ -10,7 +10,8 @@ This is a collaboration project intended for IT-390. It main theoretical purpose
 
 ## Installation
 1. Clone the repositiory
-git clone https://github.com/gavisito/LogoGenieHelper.git
+- git clone https://github.com/gavisito/LogoGenieHelper.git
+- git checkout -b your-name-here
 2. Install the dependencies:
     - pip install -r requiremetns.txt
     - create openai account
@@ -24,4 +25,11 @@ git clone https://github.com/gavisito/LogoGenieHelper.git
 
 ## Contributions
 Restricted to team members within the IT-390 class section.
+
+## Contribute structure
+- git commit -m "Dexcribe what you did - your-name-here"
+- git push origin your-name-here
+- create pull request from me to approve on GITHUB platform
+
+
 
