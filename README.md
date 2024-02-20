@@ -25,5 +25,3 @@ git clone https://github.com/gavisito/LogoGenieHelper.git
 ## Contributions
 Restricted to team members within the IT-390 class section.
 
-test in testarea branch
-
