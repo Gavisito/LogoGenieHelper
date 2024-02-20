@@ -1,0 +1,338 @@
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            background-color: linear-gradient(90deg, rgb(25, 25, 25) 25% ,rgb(7, 7, 7) 70%);
+            justify-content: space-between;
+            height: 75px;
+            position: fixed;
+            width: 100%;
+            box-shadow: 0 3px 25px rgba(0, 0, 0, 0.546); 
+            opacity: 99%;
+            transition: background-color 0.4s ease-in-out;
+            z-index: 3 ;
+        }
+
+        #navbar.scrolled {
+            background-color: black;
+        }
+
+        .company-name{
+            padding-left: 5%;
+            cursor: pointer;
+        }
+
+        .hammy {
+            cursor: pointer;
+            display: block;
+            padding-right: 5%;
+        }
+
+        .bar {
+            width: 35px;
+            height: 6px;
+            background-color: #fff; 
+            margin: 6px 0;
+        }
+
+        .company-name a, .links a{
+            padding: 25px 0; 
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.25em;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        @media screen and (min-width: 0px) {
+            .links {
+                display: none; 
+                flex-direction: column; 
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                background-color: #333;
+                z-index: 1;
+                opacity: 99%;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: fit-content;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 750px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgb(34, 193, 195);
+            background: linear-gradient(60deg, rgba(34, 193, 195, 1) 0%, rgb(87, 253, 45) 100%);
+        }
+
+        .overlay h1{
+            letter-spacing: 5px;
+            font-size: 220%;
+            width: 40%;
+        }
+        .overlay h3{
+            width: 80%;
+            word-spacing: 10px;
+            height: fit-content;
+            font-size: 110%;
+        }
+
+        .introstate{
+            width: 70%;
+            word-spacing: 10px;
+            height: fit-content;
+            font-size: 130%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .skip-to-content{
+            margin-top: 2.5%;
+            width: 180px;
+            height: 50px;
+            background-color: transparent;
+            border-radius: 13px;
+            align-items: center;
+            justify-content: center;
+            border:1px solid white;
+        }
+
+        .skip-to-content:hover{
+            border:1px solid black;
+        }
+
+        .skip-to-content a:hover{
+            color: black;
+        }
+
+        .form {
+            margin-bottom: 10%;
+            width: 100%;
+            height: max-content;
+            padding-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 13px;
+            background-color: rgb(242, 238, 238);
+            border:1px solid rgb(84, 84, 84);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        #logoForm label {
+            font-size: 25px;
+        }
+        
+        #logoForm input[type="text"],
+        #logoForm select {
+            width: 100%;
+            height: 70px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        
+         button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            width: 400px;
+            height: 60px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border: none;
+            font-size: 16px;
+            margin-top: 5%;
+        }
+        
+
+        #companyName,
+        #tagline,
+        #style,
+        #industry-genre,
+        #company-color,
+        #aspect-ratio {
+            width: 300px;
+            height: 40px;
+        }
+
+        .form-section {
+            width: 45%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            margin-top: 2.5%;
+
+        }
+
+        .form-generator-row {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            height: fit-content;
+            justify-content: center;
+            align-content: center;
+            margin-top: 50px;
+        }
+
+        #generatedImage {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            background-color: rgb(212, 212, 212);
+            border-radius: 13px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        #generatedImage img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5%; /* Add some space between images */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .contact-row{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            justify-content: center;
+        }
+
+        .contact-card{
+            background-color: #969696;
+            width: 400px;
+            height: max-content;
+            padding-bottom: 10px;
+            margin: 2%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 13px;
+            overflow: hidden;
+        }
+
+        .position{
+            width: 100%;
+            height: 200px;
+            background: rgb(34, 193, 195);
+            background: linear-gradient(60deg, rgba(34, 193, 195, 1) 0%, rgb(87, 253, 45) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .contact-info{
+            font-size: 20px;
+            width: 100%;
+            height: fit-content;
+            color: white;
+            background-color: #333;
+
+        }
+
+        .contact-info p:hover, .contact-info a:hover{
+            color: #00e500;
+            font-size: 22px;
+        }
+
+
+        footer {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgb(25, 25, 25) 25% ,rgb(7, 7, 7) 70%);
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            height: 275px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+            padding-top: 60px;
+        }
+
+        .footer-links a {
+            padding: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        .footer-links a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .con{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            margin-top: -2.5%;
+           }
+        
+           .box{
+            width: 70%;
+           }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Genie Helper</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+<div id="navbar">
+    <div class="company-name">
+        <a href="#top-page">Logo Genie Helper</a>
+    </div>
+    <div class="links">
+        <a href="#content">Generate Logo</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+    </div>
+    
+    <div class="hammy" onclick="dropdownmenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+    <div class="container" id="top-page">
+        <div class="overlay">
+            <h1>Create The Logo to Take off Your Business</h1>
+            <div class="skip-to-content"><p><a href="#content">Skip to Content</a></p></div>
+        </div>
+        <div class="description" id="content">
+            <h1>Welcome to Logo Genie Helper</h1>
+            <h3 class="introstate">Where your branding visions come to life with the power of artificial intelligence. Our mission is a commitment to transforming how businesses and individuals create logos, making it faster, more accessible, and infinitely creative.</h1>
+        </div>
+        <div class="form-generator-row">
+            <div class="form">
+                <h2 style="font-size: xx-large;">Generate Logo</h2>
+                <form id="logoForm" action="/generate_image" method="POST">
+                    <div class="form-section">
+                        <label for="industry-genre">Company name:</label><br><br>
+                        <input type="text" id="companyName" name="CompanyName" placeholder="company name"><br>
+                    </div>
+                    <div class="form-section">
+                        <label for="industry-genre">Company tagline:</label><br><br>
+                        <input type="text" id="tagline" name="tagline" placeholder="Tagline"><br>
+                    </div>
+                    <div class="form-section">
+                        <label for="company-color">Company colors:</label><br><br>
+                        <input type="text" id="company-color" name="company-color" placeholder="company-colors"><br>
+                    </div>
+                    <div class="form-section">
+                        <label for="company-values">Company values:</label><br><br>
+                        <input type="text" id="company-values" name="company-values" placeholder="company-values"><br>
+                    </div>
+                    <div class="form-section">
+                        <label for="stylee">Logo style:</label><br><br>
+                        <select id="style" name="style">
+                            <option value="Minimalist">Minimalist</option>
+                            <option value="Vintage">Vintage</option>
+                            <option value="Contemporary">Contemporary</option>
+                            <option value="Realistic">Realistic</option>
+                        </select><br>
+                    </div>
+                    <div class="form-section">
+                        <label for="industry-genre">Your Industry Genre:</label><br><br>
+                        <select id="industry-genre" name="industry-genre">
+                            <option value="music">Music</option>
+                            <option value="indsutrial">Indsutrial</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="retail">Retial</option>
+                            <option value="technology">Technology</option>
+                            <option value="food">Food</option>
+                            <option value="education">Education</option>
+                            <option value="manufacture">Manufacture</option>
+                            <option value="construction">Construction</option>
+                            <option value="content-creation">Content creation</option>
+                            <option value="fashion">Fashion</option>
+                        </select><br>
+                    </div>
+
+                    <button type="submit">Generate Logo</button>
+                </form>
+            </div>
+
+            <div id="generatedImage"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#content">Generate Logo</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About</a>
+        </div>
+        <p>&copy; 2024 Logo Genie Helper. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/dropdown.js"></script>
+    <script src="/static/generateLogo.js"></script>
+</body>
+</html>
+
