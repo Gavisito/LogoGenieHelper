@@ -12,16 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             const generatedImageElement = document.getElementById("generatedImage");
-            if (imageCounter < 3) {
+            if (imageCounter < 4) {
                 const imgElement = document.createElement("img");
                 imgElement.src = data.image_url;
                 imgElement.alt = "Generated Image";
                 generatedImageElement.appendChild(imgElement);
                 imageCounter++;
             } else {
-                // Replace the oldest image with the new one
                 const images = generatedImageElement.getElementsByTagName("img");
-                images[0].src = data.image_url;
+                const indexToReplace = (imageCounter % 4);
+                images[indexToReplace].src = data.image_url;
+                imageCounter++;
             }
         });
     });

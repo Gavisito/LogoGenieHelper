@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo Genie Helper</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <style>
 
    .rounded-box {
@@ -76,6 +77,7 @@
 </head>
 
 <body>
+  <div class="entry-loader"></div>
 <div id="navbar">
     <div class="company-name">
         <a href="#top-page">Logo Genie Helper</a>
@@ -176,7 +178,7 @@
         </div>
         <p>&copy; 2024 Logo Genie Helper. All rights reserved.</p>
     </footer>
-
+    <script src="/static/entryloader.js"></script>
     <script src="/static/dropdown.js"></script>
 
 
