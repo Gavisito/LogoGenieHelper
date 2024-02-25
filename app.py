@@ -1,7 +1,7 @@
 
 import requests
 from flask import Flask, render_template, jsonify, request
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Load API key from environment variable or configuration file
 import openai
@@ -17,7 +17,7 @@ def about():
     return render_template("about.html")
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html' )
 
 @app.route('/faq')
 def faq():
