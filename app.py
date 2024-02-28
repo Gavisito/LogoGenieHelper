@@ -40,7 +40,7 @@ def generate_image():
             return jsonify({"error": "Invalid style."}), 400
 
         # Construct prompt for DALL-E
-        prompt += f"Create a logo based on the following characterisitcs: {tagline} {companycolor} {companyvalues} {style} {industry} "
+        prompt += f"Create a logo with the tag line of: {tagline} the company colors of :{companycolor} the company values of{companyvalues} in the style of: {style} in the industry of {industry} "
 
         # Make API request to DALL-E
         response = openai.Image.create(
