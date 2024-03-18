@@ -27,6 +27,7 @@ def faq():
 def generate_image():
     try:
         prompt = request.form.get("CompanyName")
+        companyname = request.form.get("CompanyName")
         tagline = request.form.get("tagline")
         style = request.form.get("style")
         companycolor = request.form.get("company-color")
@@ -40,7 +41,7 @@ def generate_image():
             return jsonify({"error": "Invalid style."}), 400
 
         # Construct prompt for DALL-E
-        prompt += f"Create a logo with the tag line of: {tagline} the company colors of :{companycolor} the company values of{companyvalues} in the style of: {style} in the industry of {industry} "
+        prompt += f"Create a logo with the a company name in display: {companyname} with atag line of: {tagline} and the company colors being included :{companycolor} the company logo artistically displaying their values of {companyvalues} in the art style of: {style} with the consideration of aligining the industry of {industry} attributes into the logo for the company. Additionally, ensure that each word is spelled correctly inside the logo. "
 
         # Make API request to DALL-E
         response = openai.Image.create(
