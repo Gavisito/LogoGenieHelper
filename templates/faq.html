@@ -13,25 +13,44 @@
     height: fit-content;
 }
 
-.faq-item {
+
+.faq {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.question {
     background: rgb(0, 0, 0);
     background: linear-gradient(60deg, rgba(34, 193, 195, 1) 0%, rgb(87, 253, 45) 100%);
             color: black;
-    margin-bottom: 5%;
-    padding: 3.5%;
-    width: 93%;
-    height: fit-content;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
 }
 
-.faq-item h2 {
-    font-size: 175%;
-    margin-bottom: 10px;
+.question h2 {
+    margin: 0;
+    font-size: 18px;
 }
 
-.faq-item p {
-    font-size: 120%;
-    line-height: 1.5;
+.answer {
+    padding: 15px 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none; 
+}
+
+.answer p {
+    margin: 0;
+    line-height: 1.6;
 }
    </style>
 </head>
@@ -63,39 +82,71 @@
         </div>
 
         <br>
-
         <h3 style="text-align: center; font-size: xx-large;" id="content">Here's What to know</h3>
  
       <div class="faq-container">
-        <div class="faq-item">
-            <h2>What is Logo Genie Helper?</h2>
-            <p>Logo Genie Helper uses advanced AI algorithms to create unique and relevant logos based on the inputs provided by the user.</p>
-        </div>
-        <div class="faq-item">
-            <h2>How does the process work?</h2>
-            <p>Users input their brand name, industry, and preferences, and our AI generates several logo options to choose from.</p>
-        </div>
-        <div class="faq-item">
-            <h2>Can I customize my logo?</h2>
-            <p>Yes, users can further customize the generated logos to perfectly match their brand identity.</p>
-        </div>
+                    <div class="faq">
+                        <div class="question" id="q1">
+                            <h2>What is Logo Genie Helper?</h2>
+                        </div>
+                        <div class="answer" id="a1">
+                <p>Logo Genie Helper uses advanced AI algorithms to create unique and relevant logos based on the inputs provided by the user.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question" id="q2">
+                            <h2>Is there support available if I encouter issues or have questions?</h2>
+                        </div>
+                        <div class="answer" id="a2">
+                <p>Definitely. Our team is available to assist with any issues or questions. Contact us through our contact page, and we'll provide the support you need.</p>
+                        </div>      
+                    </div>
+
+                    <div class="faq">
+                        <div class="question" id="q3">
+                            <h2>How does the process work?</h2>
+                        </div>
+                        <div class="answer" id="a3">
+                <p>Users input their brand name, industry, and preferences, and our AI generates several logo options to choose from.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq">
+                        <div class="question" id="q4">
+                            <h2>Can I customize my logo?</h2>
+                        </div>
+                        <div class="answer" id="a4">
+                <p>Yes, users can further customize the generated logos to perfectly match their brand identity.</p>
+                        </div>      
+                    </div>
+
+                    <div class="faq">
+                        <div class="question" id="q5">
+                            <h2>What makes Logo Genie Helper different from traditional logo services?</h2>
+                        </div>
+                        <div class="answer" id="a5">
+                <p>Our service harnesses cutting-edge artificial intelligence to streamline the logo design process. Unlike classic methods that depend heavily on manual labor, our Logo Genie Healper analyzes industry trends and your brand's essence to generate a unique logo that stands out, ensuring a faster, most cost-effective solution.</p>
+                        </div>      
+                    </div>
+
+                    <div class="faq">
+                        <div class="question" id="q6">
+                            <h2>How long does it take to generate a logo?</h2>
+                        </div>
+                        <div class="answer" id="a6">
+                <p>Our Logo Genie Helper quickly provides initial logo designs within minutes of receiving your input. Further refinement and customization may take additional time, depending on your specific requirements.</p>
+                        </div>      
+                    </div>
         
       </div>
        
          <br>
-
-      
        <div class="con">
          <div class="box">
             <p style="font-size: x-large; text-align: center;">Still can't find what you're looking for? <a href="/contact" style="color: blue;">Contact us</a>.</p>
          </div>
        </div>
-
-       
     </div>
-
-    
-
 
     <footer>
         <div class="footer-links">
@@ -108,7 +159,7 @@
     </footer>
     <script src="/static/entryloader.js"></script>
     <script src="/static/dropdown.js"></script>
-
+    <script src="/static/faqdropdown.js"></script>
 
 </body>
 </html>
