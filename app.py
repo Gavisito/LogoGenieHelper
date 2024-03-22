@@ -33,6 +33,7 @@ def generate_image():
         companycolor = request.form.get("company-color")
         companyvalues = request.form.get("company-values")
         industry = request.form.get("industry-genre")
+        addinfo = request.form.get('extra-details')
 
         if not prompt:
             return jsonify({"error": "Company Name is required."}), 400
@@ -41,7 +42,7 @@ def generate_image():
             return jsonify({"error": "Invalid style."}), 400
 
         # Construct prompt for DALL-E
-        prompt += f"Create a logo with the a company name in display: {companyname} with atag line of: {tagline} and the company colors being included :{companycolor} the company logo artistically displaying their values of {companyvalues} in the art style of: {style} with the consideration of aligining the industry of {industry} attributes into the logo for the company. Additionally, ensure that each word is spelled correctly inside the logo. "
+        prompt += f"Create a logo with the a company name in display: {companyname} with atag line of: {tagline} and the company colors being included :{companycolor} the company logo artistically displaying their values of {companyvalues} in the art style of: {style} with the consideration of aligining the industry of {industry} attributes into the logo for the company. Additionally, ensure that each word is spelled correctly inside the logo. Here is some additonal information that the company wants to include and consider when finalizing the creation of their company logo= {addinfo}. Please ensure that you create the logo by the previous requirement they mention "
 
         # Make API request to DALL-E
         response = openai.Image.create(
