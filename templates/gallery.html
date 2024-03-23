@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Genie Helper - Gallery</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="entry-loader"></div>
+    <div id="navbar">
+        <div class="company-name">
+            <a href="#top-page">Logo Genie Helper</a>
+        </div>
+        <div class="links">
+            <a href="/">Generate Logo</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="hammy" onclick="dropdownmenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="container" id="top-page">
+        <div class="overlay">
+            <h1>Welcome to Our Gallery</h1>
+            <div class="skip-to-content"><p><a href="#content">Skip to Content</a></p></div>
+        </div>
+        <div style="text-align: center;" id="content">
+            <h2>Explore Our Creations</h2>
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 1" class="hover-pop">
+                    <p>Image 1 Description</p>
+                </div>
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 2" class="hover-pop">
+                    <p>Image 2 Description</p>
+                </div>
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 3" class="hover-pop">
+                    <p>Image 3 Description</p>
+                </div>
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 4" class="hover-pop">
+                    <p>Image 4 Description</p>
+                </div>
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 5" class="hover-pop">
+                    <p>Image 5 Description</p>
+                </div>
+                <div class="image-container">
+                    <img src="/static/images/placeholder.svg" alt="Description of image 6" class="hover-pop">
+                    <p>Image 6 Description</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/">Generate Logo</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">Contact</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/about">About</a>
+        </div>
+        <p>&copy; 2024 Logo Genie Helper. All rights reserved.</p>
+    </footer>
+    <script src="/static/entryloader.js"></script>
+    <script src="/static/dropdown.js"></script>
+</body>
+</html>
