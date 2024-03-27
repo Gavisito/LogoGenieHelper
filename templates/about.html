@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo Genie Helper</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/trails.css">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
+
+<style>
+.our-journey {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.our-promise {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.text {
+    flex-basis: 45%;
+    padding: 5%;
+}
+
+.text h2 {
+    font-size: clamp(35px, 5vw, 45px);
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: clamp(1.25rem, 2vw, 1.2rem);
+}
+
+.promise-section img {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+
+
+/* Media query for larger screens */
+@media (max-width: 1200px) {
+    .our-journey,
+    .our-promise {
+        flex-direction: column; 
+    }
+    
+    .text {
+        flex-basis: 100%;
+    }
+}
+</style>
 <body>
   <div class="entry-loader"></div>
 <div id="navbar">
@@ -26,78 +77,83 @@
         <div class="bar"></div>
     </div>
 </div>
-
     <div class="container" id="top-page">
         <div class="overlay">
             <h1>About Us</h1>
             <div class="skip-to-content"><div style="margin-top: 8%;"><a href="#content">Skip to Content</a></div></div>
         </div>
-       <div class="rounded-box" id="content">
-          <div class="box-left">
-            <p class="about-p" style="text-align: center;">Our Journey</p>
+            
+        <section class="our-journey">
+          <div class="text">
+            <h2>Our Journey</h2>
+            <p>Introducing Logo Genie Helper, born in 2024! We saw a problem: logo creation was stuck in old ways, slow and expensive. But guess what? We had a vision! We imagined a world where everyone, yes, everyone, could easily make their brand shine. So, we harnessed the power of AI and set off on a mission to revolutionize design! Now, crafting your logo is a breeze - fast, fun, and uniquely YOU! Welcome to the future of design!</p>
+
           </div>
-           <div class="box-right">
-              <p class="about-p">Founded in 2024, Logo Genie Helper was born out of a simple observation: while every brand's identity is unique, the process of logo creation was often bottlenecked by traditional constraints of time, cost, and accessibility to professional design. We envisioned a world where anyone, regardless of design expertise or budget, could bring their brand's essence into visual reality. Harnessing the latest in AI technology, we embarked on a journey to democratize design, making it a seamless, intuitive, and deeply personal experience for everyone.</p>
-           </div>
+          <div class="trail">
+            <svg class="path" viewBox="0 0 100 100">
+                <path class="dash" d="M15,0 Q150, 50 50, 50 T70,100" stroke-width="2"></path>
+            </svg>
+          </div>
+        </section>
+        
+
+
+        <div class="promise-section">
+          <img src="/static/images/promiseimg.jpg" alt="Our Promise Image">
         </div>
 
-        <div class="rounded-box">
-          <div class="box-left">
-            <p class="about-p" style="text-align: center;">Our Promise</p>
+        <section class="our-promise">
+          <div class="text">
+            <h2>Our Promise</h2>
+            <p>To you, our customers, we promise a logo creation experience that is as enriching as it is efficient. Whether starting a new venture, rebranding, or simply exploring new creative horizons, Logo Genie Helper is here to transform your ideas into iconic logos that speak volumes.</p>
           </div>
-           <div class="box-right">
-              <p class="about-p">To you, our customers, we promise a logo creation experience that is as enriching as it is efficient. Whether starting a new venture, rebranding, or simply exploring new creative horizons, Logo Genie Helper is here to transform your ideas into iconic logos that speak volumes.</p>
-           </div>
-        </div>
+        </section>
 
+
+
+
+
+
+
+
+        
       <div style="text-align: center;" id="content">
 
             <h2>Our Sample Logo</h2>
 
          <div class="sample">
            <div class="logo-box">
-            <img src="/static/images/placeholder.svg" alt="Sample logo" class="logo">
+            <img src="" alt="Sample Logo" class="logo">
            </div>
           <div class="description-box">
-            <p class="about-p">brief description of the logo.</p>
+            <p>Given basic parameters like the nature of the enterprise, exemplified by "music," its title, like "music workshop," its aesthetic essence, such as "vintage," and its scale, our Logo Genie Helper swiftly crafts a logo that encapsulates the essence of the brand.</p>
           </div>
          </div>
          
          <br>
-
-         <div class="sample">
-          <div class="description-box">
-            <p class="about-p" style="padding-left: 3%;">brief description of the logo.</p>
-          </div>
-          <div class="logo-box" style="border-right: none; border-left: 1px solid black;">
-            <img src="/static/images/placeholder.svg" alt="Sample logo" class="logo">
-           </div>
-         </div>
-
          <br>
 
-        <div class="sample">
+         <div class="sample">
           <div class="logo-box">
-            <img src="/static/images/placeholder.svg" alt="Sample logo" class="logo">
+            <img src="" alt="Sample Logo" class="logo">
            </div>
           <div class="description-box">
-            <p class="about-p">brief description of the logo.</p>
+            <p>Considering fundamental parameters such as the industry's characteristics, represented by "mining," the business name, such as "generators," its aesthetic style, exemplified by "vintage," and its scope, our Logo Genie Helper efficiently produces a logo that captures the essence of the brand.</p>
           </div>
-        </div>
-       
+         </div>
+
          <br>
 
        <h3 style="text-align: center; font-size: xx-large;">Join us</h3>
        <div class="con">
          <div class="box">
-            <p class="about-p" style="  font-size: 100%; text-align: center; word-spacing: 5px;">Your brand's identity is a journey,
+            <p style="  font-size: 100%; text-align: center; word-spacing: 5px; margin-bottom: 100px;">Your brand's identity is a journey,
                and every journey deserves a great beginning. With Logo Genie Helper, you're not just getting a
                 logo; you're setting the stage for your brand's future. Let's create something extraordinary 
                 together. For more information, please contact <a href="/contact" style="color: blue;">our team</a>.</p>
          </div>
        </div>
-
-       
+    </div>
     </div>
     <footer>
       <div class="footer-links">
