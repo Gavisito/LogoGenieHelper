@@ -20,7 +20,7 @@
     stroke: black;
     stroke-width: 2; 
     stroke-dasharray: 6 4; 
-    animation: dashAnimation 45s linear infinite;
+    animation: dashAnimation 35s linear infinite;
 }
 
 @keyframes dashAnimation {

@@ -357,19 +357,20 @@
             margin-left: 7.5%;
             margin-right: 7.5%;
             justify-content: space-around;
-            background: rgba(221, 221, 221, 0.5);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.137);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.325);
             }
         
            .logo-box {
               width: 35%; 
-              padding: 2.5%;
+              padding: 5%;
               height: fit-content;
+              box-shadow: 0 0px 13px rgba(0, 0, 0, 0.537);
             }
         
            .logo {
               width: 100%; 
               height: auto; 
+              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.109);
             }
            .description-box {
               width: 65%;
@@ -379,15 +380,16 @@
             }
 
             @media (max-width: 850px) {
-                .sample::n{
+                .samplen{
                     flex-direction: column; 
                 }
 
                 .logo-box{
-                    width:50%;
+                    width:80%;
                 }
                 .description-box{
-                    font-size: 1rem;
+                    font-size: 1.15rem;
+                    width: 90%;
                 }
             }
         
