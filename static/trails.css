@@ -1,14 +1,11 @@
 .trail {
-    position: static;
     margin-top: 5%;
-    width: clamp(450px, 40%, 100%); /* Minimum: 280px, Maximum: 50% to 100% of the viewport width */
-    height: max-content;
-    background-color: transparent;
+    width: 100%; /* Adjusted to occupy the full width of the viewport */
+    max-width: 370px; /* Limiting maximum width to 370px */
 }
 
 .path {
-    position: relative;
-    width: 100%;
+    width: 375px;
     height: 100%;
 }
 
