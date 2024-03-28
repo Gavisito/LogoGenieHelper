@@ -3,8 +3,13 @@ window.addEventListener('load', () => {
     setTimeout(() => {
     entryloader.classList.add('entry-loader--hidden');
 }, 1500);
-
-        entryloader.addEventListener('transitionend', () => {
-            document.body.removeChild(entryloader);
-        });
 });
+
+//place button onclick action here
+function entryloader() {
+    const entryloader = document.querySelector('.entry-loader');
+    entryloader.classList.remove('entry-loader--hidden');
+    setTimeout(() => {
+        entryloader.classList.add('entry-loader--hidden');
+    }, 40000);
+}
