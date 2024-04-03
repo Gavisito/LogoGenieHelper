@@ -44,18 +44,19 @@
   height: 55vh; 
   margin-top: 75px;
   background-image: url(/static/images/promiseimg.jpg);
-  background-size: cover; 
+  background-repeat: repeat-x;
+  background-size: contain;
   background-position: center;
 }
 
 
 .promise {
-    width: 80%;
+    width: 90%;
     height: fit-content;
     justify-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 5%;
     margin-bottom: 15%;
 }
@@ -75,6 +76,8 @@
     margin-top: 50px;
     font-size: clamp(1.65rem, 2.5vw, 2rem);
     line-height: 1.4;
+    margin-left: 10%;
+
 }
 
 @media (max-width: 850px) {
@@ -128,7 +131,7 @@
         </section>
 
         <div class="promise-section"></div>
-        <div class="promise">
+        <div class="promise" >
           <h2>Our Promise</h2>
           <ul>
               <li>Experience logo creation that's not just efficient, but also enriching!</li>
