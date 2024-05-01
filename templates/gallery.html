@@ -10,14 +10,28 @@
 <body>
     <div class="entry-loader"></div>
     <div id="navbar">
+        <div class="googlelink">
+            <a href='/{{data}}'>
+                <button class="loginbutton {% if data == 'logout' %}logged-in{% endif %}">
+                    <div class="body">
+                        <div class="head"></div>
+                        <div class="lbody"></div>
+                    </div>
+                </button>
+            </a>
+        </div>
         <div class="company-name">
             <a href="#top-page">Logo Genie Helper</a>
         </div>
+        <!--{{user }}-->
+    <!--check here-->
         <div class="links">
             <a href="/">Generate Logo</a>
             <a href="/faq">FAQ</a>
             <a href="/contact">Contact</a>
-            <a href="/gallery">Gallery</a>
+            {% if data == "logout" %}
+                <a href="/gallery">Gallery</a>
+            {% endif %}
             <a href="/about">About</a>
         </div>
         <div class="hammy" onclick="dropdownmenu()">
@@ -33,48 +47,61 @@
         </div>
         <div style="text-align: center;" id="content">
             <h2>Explore Our Creations</h2>
-            <div class="image-grid">
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 1" class="hover-pop">
-                    <p>Image 1 Description</p>
+            <div class="carousel">
+                {% if image_urls %}
+                    {% set ns = namespace(c = 0) %}
+                    <div class="image-container">
+                        {% for url in image_urls %}
+                            {% if user_id in url %}
+                                {% set ns.c = ns.c + 1 %}
+                                <img src="{{ url }}" alt="Image" class="img-hover">
+                            {% endif %}
+                        {% endfor %}
+                        {% if ns.c <= 0 %}
+                            {% for _ in range(10) %}
+                                <div class="img-item">
+                                    <img src="/static/images/placeholder.svg" alt="no images in bucket" class="img-hover">
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="image-container">
+                        {% for _ in range(10) %}
+                            <div class="img-item">
+                                <img src="/static/images/placeholder.svg" alt="no images in bucket" class="img-hover">
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>          
+        </div>
+        <div class="faq-container" style="margin-top: 5%;">
+            <div class="faq">
+                <div class="question" id="q1">
+                    <h2>How Can You Save Your Images?</h2>
                 </div>
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 2" class="hover-pop">
-                    <p>Image 2 Description</p>
-                </div>
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 3" class="hover-pop">
-                    <p>Image 3 Description</p>
-                </div>
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 4" class="hover-pop">
-                    <p>Image 4 Description</p>
-                </div>
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 5" class="hover-pop">
-                    <p>Image 5 Description</p>
-                </div>
-                <div class="image-container">
-                    <img src="/static/images/placeholder.svg" alt="Description of image 6" class="hover-pop">
-                    <p>Image 6 Description</p>
+                <div class="answer" id="a1">
+                    <h3>On mobile you can save your images by press and holding to click on save image option</h3>
+                    <h3>On Laptop and Desktop devices, you can save your images by right clicking on the image to click on save image option</h3>
                 </div>
             </div>
-            
-            
-        </div>
-    </div>
-
+        </div>   
+    </div> 
     <footer>
         <div class="footer-links">
             <a href="/">Generate Logo</a>
             <a href="/faq">FAQ</a>
             <a href="/contact">Contact</a>
+            {% if data == "logout" %}
             <a href="/gallery">Gallery</a>
+            {% endif %}
             <a href="/about">About</a>
         </div>
         <p>&copy; 2024 Logo Genie Helper. All rights reserved.</p>
     </footer>
     <script src="/static/entryloader.js"></script>
     <script src="/static/dropdown.js"></script>
+    <script src="/static/faqdropdown.js"></script>
 </body>
 </html>

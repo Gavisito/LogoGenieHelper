@@ -6,22 +6,67 @@
     <title>Logo Genie Helper</title>
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-
 </head>
+
+<style>
+          .chat-bubble {
+            position: absolute;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+            top: 80px;
+            left: 3vw;
+            animation: fadeOut 30s forwards;
+          }
+      
+          .chat-bubble::before {
+            content: "";
+            position: absolute;
+            top: -10px; 
+            left: 10px; 
+            border-width: 0 10px 10px 10px; 
+            border-style: solid;
+            border-color: transparent transparent #f0f0f0 transparent; 
+            
+          }
+          @keyframes fadeOut {
+            from { opacity: 1; } 
+            to { opacity: 0; }
+          }
+
+</style>
 <body>
 <div class="entry-loader"></div>
 <div id="navbar">
+    <div class="googlelink">
+        <a href='/{{data}}'>
+            <button class="loginbutton {% if data == 'logout' %}logged-in{% endif %}">
+                <div class="body">
+                    <div class="head"></div>
+                    <div class="lbody"></div>
+                </div>
+            </button>
+        </a>
+    </div>    
+    <div class="chat-bubble" id="chat-bubble">
+        <p>Please be informed that users can access the entire collection of their generated content within the gallery section. However, it is imperative to note that access to the gallery page requires prior authentication through a Google account sign-in process.</p>
+    </div>
     <div class="company-name">
         <a href="#top-page">Logo Genie Helper</a>
     </div>
+	<!--{{user }}-->
+    <!--check here-->
     <div class="links">
         <a href="/">Generate Logo</a>
         <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
-        <a href="/gallery">Gallery</a>
+        {% if data == "logout" %}
+            <a href="/gallery">Gallery</a>
+        {% endif %}
         <a href="/about">About</a>
-      </div>
-    
+    </div>
+
     <div class="hammy" onclick="dropdownmenu()">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -33,15 +78,26 @@
             <h1>Create The Logo to Take off Your Business</h1>
             <div class="skip-to-content"><p><a href="#content">Skip to Content</a></p></div>
         </div>
-        <div class="introcompany" id="content">
+        <div id="content"></div>
+        <section class="our-journey">
+            <div class="text">
                 <h1>Welcome to Our Logo Generator</h1>
                 <h3>Where your branding visions come to life with the power of artificial intelligence. 
                     Our mission is a commitment to transforming how businesses and individuals create 
                     logos, making it faster, more accessible, and infinitely creative.</h3>
-        </div>
+            </div>
+            <div class="trail" >
+                <img src="/static/favicon.ico" width="80%" height="auto" style="margin-right: 10%; margin-left: 10%;" alt="logo">
+            </div>
+          </section>
+
+          <section class="introcompany">
+            <div class="text">
+                <h1>Enter your desired aesthetic of your logo below!</h1>
+            </div>
+          </section>
         <div class="form-generator-row">
             <div class="form">
-                <h2 style="font-size: xx-large;">Generate Logo</h2>
                 <form id="logoForm" action="/generate_image" method="POST">
                     <div class="form-section">
                         <label for="companyName">Company name:</label><br><br>
@@ -105,14 +161,21 @@
             <a href="#content">Generate Logo</a>
             <a href="/faq">FAQ</a>
             <a href="/contact">Contact</a>
+            {% if data == "logout" %}
             <a href="/gallery">Gallery</a>
+            {% endif %}
             <a href="/about">About</a>
         </div>
         <p>&copy; 2024 Logo Genie Helper. All rights reserved.</p>
     </footer>
+    <script>
+        setTimeout(function() {
+          var chatBubble = document.getElementById("chat-bubble");
+          chatBubble.parentNode.removeChild(chatBubble);
+        }, 30000); 
+      </script>
     <script src="/static/entryloader.js"></script>
     <script src="/static/dropdown.js"></script>
     <script src="/static/generateLogo.js"></script>
 </body>
 </html>
-
