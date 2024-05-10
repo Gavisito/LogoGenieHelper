@@ -10,10 +10,4 @@ This is a collaboration project intended for IT-390. It main theoretical purpose
 - **Galllery Availability**: When logo are generated, they will automatically be stored in the gallery page, which you can access with a google account sign in (Achieved using Google AuthO).
 
 ## Contributions
-Restricted to team members within the IT-390 class section.
-
-
-
-
-
-
+Restricted to team members within the IT-390 class section
