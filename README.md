@@ -12,11 +12,6 @@ This is a collaboration project intended for IT-390. It main theoretical purpose
 ## Contributions
 Restricted to team members within the IT-390 class section.
 
-## Demo on front end
-<video width="320" height="240" controls>
-  <source src="/LGHDEMO.mov.zip" type="video/mov">
-  Your browser does not support the video tag.
-</video>
 
 
 
