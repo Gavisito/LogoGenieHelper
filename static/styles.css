@@ -43,7 +43,7 @@ a{
     animation: loading 1.25s ease infinite;
     background-position: center;
     background-size: contain;
-    background-image: url("/static/favicon.ico");
+    background-image: url("../static/favicon.ico");
 }
 
 
