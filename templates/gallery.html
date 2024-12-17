@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo Genie Helper - Gallery</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="../static/styles.css"><link rel="stylesheet" href="../static/styles.css">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
@@ -25,15 +25,15 @@
         </div>
         <!--{{user }}-->
     <!--check here-->
-        <div class="links">
-            <a href="/">Generate Logo</a>
-            <a href="/faq">FAQ</a>
-            <a href="/contact">Contact</a>
-            {% if data == "logout" %}
-                <a href="/gallery">Gallery</a>
-            {% endif %}
-            <a href="/about">About</a>
-        </div>
+    <div class="links">
+        <a href="/">Generate Logo</a>
+        <a href="../templates/faq.html">FAQ</a>
+        <a href="../templates/contact.html">Contact</a>
+        {% if data == "logout" %}
+            <a href="../templates/gallery.html">Gallery</a>
+        {% endif %}
+        <a href="../templates/about.html">About</a>
+    </div>
         <div class="hammy" onclick="dropdownmenu()">
             <div class="bar"></div>
             <div class="bar"></div>
