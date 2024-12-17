@@ -11,5 +11,5 @@ function entryloader() {
     entryloader.classList.remove('entry-loader--hidden');
     setTimeout(() => {
         entryloader.classList.add('entry-loader--hidden');
-    }, 25000);
+    }, 2500);
 }
